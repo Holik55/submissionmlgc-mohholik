@@ -27,38 +27,5 @@ async function getPredictionHistory() {
   }
 }
 
-// async function getPredictionHistory() {
-//   try {
-//     const predictionsCollection = db.collection('predictions');
-//     const snapshot = await predictionsCollection.get();
-
-//     const data = snapshot.docs.map((doc) => {
-//       const docData = doc.data();
-//       return {
-//         id: doc.id,
-//         history: {
-//           result: docData.result,
-//           createdAt: docData.createdAt,
-//           suggestion: docData.suggestion,
-//           id: doc.id,
-//         },
-//       };
-//     });
-
-//     // Langsung mengembalikan data sesuai format yang diminta
-//     return {
-//       status: 'success',
-//       data,
-//     };
-//   } catch (error) {
-//     console.error('Error fetching data:', error.message);
-//     return {
-//       status: 'error',
-//       message: 'Failed to fetch data',
-//     };
-//   }
-// }
-
-
 
 export { savePrediction, getPredictionHistory};
